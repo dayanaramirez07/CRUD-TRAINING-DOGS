@@ -16,12 +16,13 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Marit
+ * @author Dayana
  */
+
 @Entity
 @Table
 @NamedQueries(
-        @NamedQuery(name = "Manga.getAll", query = "SELECT e FROM Manga e"))
+        @NamedQuery(name = "Training.getAll", query = "SELECT e FROM Training e"))
 public class Training implements Serializable {
 
     @Id

@@ -10,7 +10,7 @@ import javax.ejb.Local;
 
 /**
  *
- * @author Marit
+ * @author Dayana
  */
 @Local
 public interface TrainingDaoLocal {

@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author Marit
+ * @author Dayana
  */
 @Stateless
 public class TrainingDao implements TrainingDaoLocal {

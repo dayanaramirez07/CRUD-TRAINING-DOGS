@@ -55,9 +55,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
 var opcionesPrograma = {
   "0": [""],
-  "1": ["Adiestramiento b·sico"],
-  "2": ["Adiestramiento y correcciÛn de conductas"],
-  "3": ["CorrecciÛn de conductas"],
+  "1": ["Adiestramiento b√°sico"],
+  "2": ["Adiestramiento y correcci√≥n de conductas"],
+  "3": ["Correcci√≥n de conductas"],
   "4": ["Entrenamiento para trucos"],
   "5": ["Adiestramiento avanzado"],
   "6": ["Ejercita a tu mascota"]

@@ -348,7 +348,7 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <div class="row justify-content-center">
+                <!-- <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
                         <form id="formularioForm" data-sb-form-api-token="API_TOKEN" action="./TrainingServlet" method="POST">
                             <div class="form-floating mb-3">
@@ -432,20 +432,86 @@
                 </div>
                 <div class="row justify-content-center text-center">
                     <p><br></p>
-                    <table class="table" border="1">
-                        <th>Identificación del dueño</th>
-                        <th>Nombre del dueño</th>
-                        <th>Correo electrónico</th>
-                        <th>Teléfono</th>
-                        <th>Nombre del perro</th>
-                        <th>Raza</th>
-                        <th>Macho/Hembra</th>
-                        <th>Edad</th>
-                        <th>Color</th>
-                        <th>Programa</th>
-                        <th>Actividad ecológica</th>
+                    
                         
-                        <c:forEach items="${allTraining}" var="training">
+                        
+                    </table>
+                </div> -->
+                <form action="./TrainingServlet" method="POST">
+                    <table>
+                        <tr>
+                            <th> Student ID</th>
+                            <th><input type="text" name="personId" value="${trainingdogs.personId}"/> </th>
+                        </tr>
+                        <tr>
+                            <th> First Name</th>
+                            <th> <input type="text" name="namePerson" value="${trainingdogs.namePerson}"/></th>
+                        </tr>
+                        <tr>
+                            <th> Last Name</th>
+                            <th><input type="text" name="correo" value="${trainingdogs.correo}"/> </th>
+                        </tr>
+                        <tr>
+                            <th> Year Level</th>
+                            <th> <input type="text" name="telefono" value="${trainingdogs.telefono}"/></th>
+                        </tr>
+                        <tr>
+                            <th> Student ID</th>
+                            <th><input type="text" name="nameDog" value="${trainingdogs.nameDog}"/> </th>
+                        </tr>
+                        <tr>
+                            <th> First Name</th>
+                            <th> <input type="text" name="raza" value="${trainingdogs.raza}"/></th>
+                        </tr>
+                        <tr>
+                            <th> Last Name</th>
+                            <th><input type="text" name="sexo" value="${trainingdogs.sexo}"/> </th>
+                        </tr>
+                        <tr>
+                            <th> Year Level</th>
+                            <th> <input type="text" name="edad" value="${trainingdogs.edad}"/></th>
+                        </tr>
+                        <tr>
+                            <th> Student ID</th>
+                            <th><input type="text" name="color" value="${trainingdogs.color}"/> </th>
+                        </tr>
+                        <tr>
+                            <th> First Name</th>
+                            <th> <input type="text" name="programa" value="${trainingdogs.programa}"/></th>
+                        </tr>
+                        <tr>
+                            <th> Last Name</th>
+                            <th><input type="text" name="actividad" value="${trainingdogs.actividad}"/> </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" name="action" value="Add"/>
+                                <input type="submit" name="action" value="Edit"/>
+                                <input type="submit" name="action" value="Delete"/>
+                                <input type="submit" name="action" value="Search"/>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+                <br>
+
+                <table class="table" border="1">
+                    <th>Identificación del dueño</th>
+                    <th>Nombre del dueño</th>
+                    <th>Correo electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Nombre del perro</th>
+                    <th>Raza</th>
+                    <th>Macho/Hembra</th>
+                    <th>Edad</th>
+                    <th>Color</th>
+                    <th>Programa</th>
+                    <th>Actividad ecológica</th>
+
+                    
+                    <c:forEach items="${allTraining}" var="training">
                         <tr>
                             <td>${training.personId}</td>
                             <td>${training.namePerson}</td>
@@ -460,8 +526,7 @@
                             <td>${training.actividad}</td>
                         </tr>
                     </c:forEach>
-                    </table>
-                </div>
+                </table>
             </div>
         </section>
         <!-- Pie de página-->

@@ -6,7 +6,6 @@ package com.controller;
 
 import com.model.Training;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +15,7 @@ import com.dao.TrainingDaoLocal;
 
 /**
  *
- * @author Marit
+ * @author Dayana
  */
 public class TrainingServlet extends HttpServlet {
 
