@@ -30,38 +30,38 @@ public class Training implements Serializable {
     @Column
     private int personId;
     @Column
-    private String namePerson;
+    private String personName;
     @Column
-    private String correo;
+    private String email;
     @Column
-    private String telefono;
+    private String phone;
     @Column
-    private String nameDog;
+    private String dogName;
     @Column
-    private String raza;
+    private String breed;
     @Column
-    private String sexo;
+    private String sex;
     @Column
-    private int edad;
+    private int age;
     @Column
     private String color;
     @Column
-    private String programa;
+    private String program;
     @Column
-    private String actividad;
+    private String activity;
 
-    public Training(int personId, String namePerson, String correo, String telefono, String nameDog, String raza, String sexo, int edad, String color, String programa, String actividad) {
+    public Training(int personId, String personName, String email, String phone, String dogName, String breed, String sex, int age, String color, String program, String activity) {
         this.personId = personId;
-        this.namePerson = namePerson;
-        this.correo = correo;
-        this.telefono = telefono;
-        this.nameDog = nameDog;
-        this.raza = raza;
-        this.sexo = sexo;
-        this.edad = edad;
+        this.personName = personName;
+        this.email = email;
+        this.phone = phone;
+        this.dogName = dogName;
+        this.breed = breed;
+        this.sex = sex;
+        this.age = age;
         this.color = color;
-        this.programa = programa;
-        this.actividad = actividad;
+        this.program = program;
+        this.activity = activity;
     }
     
     public Training() {
@@ -75,60 +75,60 @@ public class Training implements Serializable {
         this.personId = personId;
     }
 
-    public String getNamePerson() {
-        return namePerson;
+    public String getPersonName() {
+        return personName;
     }
 
-    public void setNamePerson(String namePerson) {
-        this.namePerson = namePerson;
+    public void setPersonName(String personName) {
+        this.personName = personName;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getNameDog() {
-        return nameDog;
+    public String getDogName() {
+        return dogName;
     }
 
-    public void setNameDog(String nameDog) {
-        this.nameDog = nameDog;
+    public void setDogName(String dogName) {
+        this.dogName = dogName;
     }
 
-    public String getRaza() {
-        return raza;
+    public String getBreed() {
+        return breed;
     }
 
-    public void setRaza(String raza) {
-        this.raza = raza;
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 
-    public String getSexo() {
-        return sexo;
+    public String getSex() {
+        return sex;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getAge() {
+        return age;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getColor() {
@@ -139,19 +139,19 @@ public class Training implements Serializable {
         this.color = color;
     }
 
-    public String getPrograma() {
-        return programa;
+    public String getProgram() {
+        return program;
     }
 
-    public void setPrograma(String programa) {
-        this.programa = programa;
+    public void setProgram(String program) {
+        this.program = program;
     }
 
-    public String getActividad() {
-        return actividad;
+    public String getActivity() {
+        return activity;
     }
 
-    public void setActividad(String actividad) {
-        this.actividad = actividad;
+    public void setActivity(String activity) {
+        this.activity = activity;
     }
 }

@@ -335,70 +335,71 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
+    <!-- Sección de formulario -->
+    <section class="page-section" id="formulario">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Formulario</h2>
+            <p class="text-center text-secondary"><br>Datos de los clientes que han diligenciado el formulario</p>
+            <!-- Icono divisor -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
             </div>
-        </section>
-        <!-- Sección de formulario -->
-        <section class="page-section" id="formulario">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Formulario</h2>
-                <p class="text-center text-secondary"><br>Datos de los clientes que han diligenciado el formulario</p>
-                <!-- Icono divisor -->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <form id="formularioForm" data-sb-form-api-token="API_TOKEN" action="./TrainingServlet" method="POST">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <form action="./TrainingServlet" method="POST">
+                        <table>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="id" type="text" placeholder="Escribe tu identificación..." data-sb-validations="required" name="personId" value="${trainingdogs.personId}" />
+                                <input class="form-control" id="id" type="text" placeholder="Escribe tu identificación..." data-sb-validations="required" name="personId" value="${training.personId}" />
                                 <label for="id">Identificación del dueño</label>
                                 <div class="invalid-feedback" data-sb-feedback="id:required">Una identificación es requerida.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Escribe tu nombre..." data-sb-validations="required" name="namePerson" value="${trainingdogs.namePerson}" />
+                                <input class="form-control" id="name" type="text" placeholder="Escribe tu nombre..." data-sb-validations="required" name="personName" value="${training.personName}" />
                                 <label for="name">Nombre del dueño</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">Un nombre es requerido.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" data-sb-validations="required,email" name="correo" value="${trainingdogs.correo}" />
+                                <input class="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" data-sb-validations="required,email" name="email" value="${training.email}" />
                                 <label for="email">Correo electrónico</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">Un correo es requerido.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Correo no válido</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" name="telefono" value="${trainingdogs.telefono}" />
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" name="phone" value="${training.phone}" />
                                 <label for="phone">Teléfono</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">Un número de teléfono es requerido.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="nameDog" type="text" placeholder="Escribe su nombre..." data-sb-validations="required" name="nameDog" value="${trainingdogs.nameDog}" />
+                                <input class="form-control" id="nameDog" type="text" placeholder="Escribe su nombre..." data-sb-validations="required" name="dogName" value="${training.dogName}" />
                                 <label for="nameDog">Nombre del perro</label>
                                 <div class="invalid-feedback" data-sb-feedback="nameDog:required">Un nombre es requerido.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="raza" type="text" placeholder="Escribe su raza" data-sb-validations="required" name="raza" value="${trainingdogs.raza}" />
+                                <input class="form-control" id="raza" type="text" placeholder="Escribe su raza" data-sb-validations="required" name="breed" value="${training.breed}" />
                                 <label for="raza">Raza</label>
                                 <div class="invalid-feedback" data-sb-feedback="raza:required">Una raza es requerida.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="mh" type="text" placeholder="Escribe si es macho o hembra" data-sb-validations="required" name="sexo" value="${trainingdogs.sexo}" />
+                                <input class="form-control" id="mh" type="text" placeholder="Escribe si es macho o hembra" data-sb-validations="required" name="sex" value="${training.sex}" />
                                 <label for="mh">Macho/Hembra</label>
                                 <div class="invalid-feedback" data-sb-feedback="mh:required">Requerido.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="edad" type="text" placeholder="Escribe su edad" data-sb-validations="required" name="edad" value="${trainingdogs.edad}" />
+                                <input class="form-control" id="edad" type="text" placeholder="Escribe su edad" data-sb-validations="required" name="age" value="${training.age}" />
                                 <label for="edad">Edad</label>
                                 <div class="invalid-feedback" data-sb-feedback="edad:required">Una edad es requerida.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="color" type="text" placeholder="Escribe su color" data-sb-validations="required" name="color" value="${trainingdogs.color}" />
+                                <input class="form-control" id="color" type="text" placeholder="Escribe su color" data-sb-validations="required" name="color" value="${training.color}" />
                                 <label for="color">Color</label>
                                 <div class="invalid-feedback" data-sb-feedback="color:required">Un color es requerido.</div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="programa" type="text" placeholder="Elige el programa que deseas" data-sb-validations="required" name="programa" value="${trainingdogs.programa}" />
+                                <input class="form-control" id="programa" type="text" placeholder="Elige el programa que deseas" data-sb-validations="required" name="program" value="${training.program}" />
                                 <label for="programa">Programa</label>
                                 <select class="form-select" id="opcionesPrograma" onchange="cambioOpcionesPrograma();" type="text">
                                     <option value="0"></option>
@@ -411,7 +412,7 @@
                                 </select>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="actividad" type="text" placeholder="Elige la actividad que deseas" data-sb-validations="required" name="actividad" value="${trainingdogs.actividad}" />
+                                <input class="form-control" id="actividad" type="text" placeholder="Elige la actividad que deseas" data-sb-validations="required" name="activity" value="${training.activity}" />
                                 <label for="actividad">Actividad ecológica</label>
                                 <select class="form-select" id="opcionesActividad" onchange="cambioOpcionesActividad();" type="text">
                                     <option value="0"></option>
@@ -419,84 +420,20 @@
                                     <option value="2">Camping con perros</option>
                                 </select>
                             </div>
-                        </form>
-                    </div>
+                            <div class="row justify-content-center text-center">
+                                <div class="col-lg-10 col-xl-10">
+                                        <button class="btn btn-primary btn-lg" value="Add" type="submit" name="action">Añadir</button>
+                                        <button class="btn btn-primary btn-lg" value="Search" type="submit" name="action" onclick="validar">Buscar</button>
+                                        <button class="btn btn-primary btn-lg" value="Edit" type="submit" name="action">Editar</button>
+                                        <button class="btn btn-primary btn-lg" value="Delete" type="submit" name="action">Eliminar</button>
+                                </div>
+                            </div>
+                        </table>
+                    </form>
                 </div>
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <button class="btn btn-primary btn-xl" id="add" type="submit" data-bs-toggle="modal" data-bs-target="#formularioForm1" name="action">Añadir</button>
-                        <button class="btn btn-primary btn-xl" id="delete" type="submit" data-bs-toggle="modal" data-bs-target="#formularioForm2" name="action" onclick="validar">Buscar</button>
-                        <button class="btn btn-primary btn-xl" id="edit" type="submit" data-bs-toggle="modal" data-bs-target="#formularioForm3" name="action">Editar</button>
-                        <button class="btn btn-primary btn-xl" id="search" type="submit" data-bs-toggle="modal" data-bs-target="#formularioForm4" name="action">Eliminar</button>
-                    </div>
-                </div>
-                <div class="row justify-content-center text-center">
-                    <p><br></p>
-                    
-                        
-                        
-                    </table>
-                </div> -->
-                <form action="./TrainingServlet" method="POST">
-                    <table>
-                        <tr>
-                            <th> Student ID</th>
-                            <th><input type="text" name="personId" value="${trainingdogs.personId}"/> </th>
-                        </tr>
-                        <tr>
-                            <th> First Name</th>
-                            <th> <input type="text" name="namePerson" value="${trainingdogs.namePerson}"/></th>
-                        </tr>
-                        <tr>
-                            <th> Last Name</th>
-                            <th><input type="text" name="correo" value="${trainingdogs.correo}"/> </th>
-                        </tr>
-                        <tr>
-                            <th> Year Level</th>
-                            <th> <input type="text" name="telefono" value="${trainingdogs.telefono}"/></th>
-                        </tr>
-                        <tr>
-                            <th> Student ID</th>
-                            <th><input type="text" name="nameDog" value="${trainingdogs.nameDog}"/> </th>
-                        </tr>
-                        <tr>
-                            <th> First Name</th>
-                            <th> <input type="text" name="raza" value="${trainingdogs.raza}"/></th>
-                        </tr>
-                        <tr>
-                            <th> Last Name</th>
-                            <th><input type="text" name="sexo" value="${trainingdogs.sexo}"/> </th>
-                        </tr>
-                        <tr>
-                            <th> Year Level</th>
-                            <th> <input type="text" name="edad" value="${trainingdogs.edad}"/></th>
-                        </tr>
-                        <tr>
-                            <th> Student ID</th>
-                            <th><input type="text" name="color" value="${trainingdogs.color}"/> </th>
-                        </tr>
-                        <tr>
-                            <th> First Name</th>
-                            <th> <input type="text" name="programa" value="${trainingdogs.programa}"/></th>
-                        </tr>
-                        <tr>
-                            <th> Last Name</th>
-                            <th><input type="text" name="actividad" value="${trainingdogs.actividad}"/> </th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <input type="submit" name="action" value="Add"/>
-                                <input type="submit" name="action" value="Edit"/>
-                                <input type="submit" name="action" value="Delete"/>
-                                <input type="submit" name="action" value="Search"/>
-
-                            </td>
-                        </tr>
-
-                    </table>
-                </form>
-                <br>
-
+            </div>
+            <br>
+            <div class="row justify-content-center text-center">
                 <table class="table" border="1">
                     <th>Identificación del dueño</th>
                     <th>Nombre del dueño</th>
@@ -510,58 +447,59 @@
                     <th>Programa</th>
                     <th>Actividad ecológica</th>
 
-                    
-                    <c:forEach items="${allTraining}" var="training">
+
+                    <c:forEach items="${allTraining}" var="trai">
                         <tr>
-                            <td>${training.personId}</td>
-                            <td>${training.namePerson}</td>
-                            <td>${training.correo}</td>
-                            <td>${training.telefono}</td>
-                            <td>${training.nameDog}</td>
-                            <td>${training.raza}</td>
-                            <td>${training.sexo}</td>
-                            <td>${training.edad}</td>
-                            <td>${training.color}</td>
-                            <td>${training.programa}</td>
-                            <td>${training.actividad}</td>
+                            <td>${trai.personId}</td>
+                            <td>${trai.personName}</td>
+                            <td>${trai.email}</td>
+                            <td>${trai.phone}</td>
+                            <td>${trai.dogName}</td>
+                            <td>${trai.breed}</td>
+                            <td>${trai.sex}</td>
+                            <td>${trai.age}</td>
+                            <td>${trai.color}</td>
+                            <td>${trai.program}</td>
+                            <td>${trai.activity}</td>
                         </tr>
                     </c:forEach>
                 </table>
             </div>
-        </section>
-        <!-- Pie de página-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Locación</h4>
-                        <p class="lead mb-0">
-                            Universidad de Antioquia
-                        </p>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Sitios Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
-                    </div>
-                    <div class="col-lg-4 container d-flex align-items-center flex-column">
-                        <h4 class="text-uppercase mb-4">Training dogs</h4>
-                        <img class="masthead-avatar mb-5" src="assets/img/avatar.svg" width="50px" height="50px"/>
-                    </div>
+        </div>
+    </section>
+    <!-- Pie de página-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Locación</h4>
+                    <p class="lead mb-0">
+                        Universidad de Antioquia
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Sitios Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                </div>
+                <div class="col-lg-4 container d-flex align-items-center flex-column">
+                    <h4 class="text-uppercase mb-4">Training dogs</h4>
+                    <img class="masthead-avatar mb-5" src="assets/img/avatar.svg" width="50px" height="50px"/>
                 </div>
             </div>
-        </footer>
-        <!-- Sección de copyright -->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Freelancer - Bootstrap<br>Editado por Dayana Ramírez</small></div>
         </div>
-        
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    </footer>
+    <!-- Sección de copyright -->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Freelancer - Bootstrap<br>Editado por Dayana Ramírez</small></div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
 </html>

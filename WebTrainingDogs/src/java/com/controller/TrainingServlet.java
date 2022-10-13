@@ -4,18 +4,19 @@
  */
 package com.controller;
 
+import com.dao.TrainingDaoLocal;
 import com.model.Training;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.dao.TrainingDaoLocal;
 
 /**
  *
- * @author Dayana
+ * @author Administrador
  */
 public class TrainingServlet extends HttpServlet {
 
@@ -33,8 +34,6 @@ public class TrainingServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         
-
         String action = request.getParameter("action");
         String personIdStr = request.getParameter("personId");
         int personId = 0;
@@ -42,22 +41,22 @@ public class TrainingServlet extends HttpServlet {
             personId = Integer.parseInt(personIdStr);
         }
 
-        String namePerson = request.getParameter("namePerson");
-        String correo = request.getParameter("correo");
-        String telefono = request.getParameter("telefono");
-        String nameDog = request.getParameter("nameDog");
-        String raza = request.getParameter("raza");
-        String sexo = request.getParameter("sexo");
-        String edadStr = request.getParameter("edad");
-        int edad = 0;
-        if (edadStr != null && !edadStr.equals("")) {
-            edad = Integer.parseInt(edadStr);
+        String personName = request.getParameter("personName");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+        String dogName = request.getParameter("dogName");
+        String breed = request.getParameter("breed");
+        String sex = request.getParameter("sex");
+        String ageStr = request.getParameter("age");
+        int age = 0;
+        if (ageStr != null && !ageStr.equals("")) {
+            age = Integer.parseInt(ageStr);
         }
         String color = request.getParameter("color");
-        String programa = request.getParameter("programa");
-        String actividad = request.getParameter("actividad");
+        String program = request.getParameter("program");
+        String activity = request.getParameter("activity");
         
-        Training training = new Training(personId, namePerson, correo, telefono, nameDog, raza, sexo, edad, color, programa, actividad);
+        Training training = new Training(personId, personName, email, phone, dogName, breed, sex, age, color, program, activity);
         if ("Add".equalsIgnoreCase(action)) {
             trainingDao.addTraining(training);
 
@@ -71,8 +70,8 @@ public class TrainingServlet extends HttpServlet {
         request.setAttribute("training", training);
         request.setAttribute("allTraining", trainingDao.getAllTrainings());
         request.getRequestDispatcher("index.jsp").forward(request, response);
+        
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
